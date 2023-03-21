@@ -2,7 +2,7 @@
 
 As you can tell by the title, I will be teaching myself some pretty common and popular algorithms you might see in the computer science world
 
-Why am I doing this?
+## Why am I doing this?
 * I am taking CPSC 131 at CSUF and if you do not know, that class teaches you data structures
 * I am impatient
 * I want to get ahead of my peers
