@@ -20,7 +20,7 @@ class TreeNode:
             if self.left is None:
                 self.left = TreeNode(value)
             else:
-                self.left.inser(value)
+                self.left.insert(value)
 
         else:
             if self.right is None:
