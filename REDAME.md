@@ -10,3 +10,7 @@ As you can tell by the title, I will be teaching myself some pretty common and p
 * I want to make a bunch of money, and this would be one of many many many steps to put me closer to that goal
 * I seem to have built a small passion for coding
 * this is my third major at CSUF and when I say small passion, I mean it
+
+## Contributors
+
+Just me, Sebastian Serrano, or my Discord name, Teddy Chubbs, don't wonder why Teddy Chubbs, I just found that name extremely comical
