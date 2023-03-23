@@ -35,7 +35,7 @@ class TreeNode:
         if self.right:
             self.right.in_orderTraversal()
 
-    #preorder traversal
+    #pre order traversal
     def pre_orderTraversal(self):
         # we print the value first
         print(self.value)
@@ -43,6 +43,8 @@ class TreeNode:
             self.left.pre_orderTraversal()
         if self.right:
             self.right.pre_orderTraversal()
+    
+    #post order traveral
     def post_orderTraversal(self):
         if self.left:
             self.left.post_orderTraversal()
