@@ -4,11 +4,6 @@
 # every value greater than or equal to the root/parent node will be on the right side
 # each child node can be viewed as its own binary tree, to make the function recursive, same rules apply
 
-
-from asyncio.windows_events import NULL
-from tkinter.tix import Tree
-
-
 class TreeNode:
 
     def __init__(self, value):
@@ -28,12 +23,33 @@ class TreeNode:
                 self.right = TreeNode(value)
             else:
                 self.right.insert(value)
+        
+        # in order traversal, calls each node's value in numerical order
+    def inorderTraversal(self):
+        # first we will go as far left as possible
+        # if we cant go left anymore, we call print()
+        # then we traverse as far right as possible 
+        if self.left: # if left node exists
+            self.left.inorderTraversal()
+        print(self.value)
+        if self.right:
+            self.right.inorderTraversal()
 
-# in order traversal, calls each node's value in numerical order
-def InOrderTraversal(self):
-    # first we will go as far left as possible
-    # if we cant go left anymore, we call print()
-    # then we traverse as far right as possible 
-    if self.left: # if left node exists
-        self.left.inOrderTraversal()
-    print(self.value)
+
+
+# root node
+tree = TreeNode(6)
+# iserting values after our root node
+tree.insert(5)
+tree.insert(2)
+tree.insert(4)
+tree.insert(1)
+tree.insert(2)
+tree.insert(4)
+tree.insert(19)
+tree.insert(29)
+tree.insert(11)
+tree.insert(4)
+tree.insert(2)
+
+tree.inorderTraversal()
