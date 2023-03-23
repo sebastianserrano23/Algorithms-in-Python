@@ -6,6 +6,7 @@
 
 
 from asyncio.windows_events import NULL
+from tkinter.tix import Tree
 
 
 class TreeNode:
@@ -27,3 +28,12 @@ class TreeNode:
                 self.right = TreeNode(value)
             else:
                 self.right.insert(value)
+
+# in order traversal, calls each node's value in numerical order
+def InOrderTraversal(self):
+    # first we will go as far left as possible
+    # if we cant go left anymore, we call print()
+    # then we traverse as far right as possible 
+    if self.left: # if left node exists
+        self.left.inOrderTraversal()
+    print(self.value)
