@@ -43,6 +43,12 @@ class TreeNode:
             self.left.pre_orderTraversal()
         if self.right:
             self.right.pre_orderTraversal()
+    def post_orderTraversal(self):
+        if self.left:
+            self.left.post_orderTraversal()
+        if self.right:
+            self.right.post_orderTraversal()
+        print(self.value)
 
 
 # root node
@@ -61,5 +67,7 @@ tree.insert(4)
 tree.insert(2)
 
 tree.in_orderTraversal()
-
+print("end")
 tree.pre_orderTraversal()
+print("end")
+tree.post_orderTraversal()
