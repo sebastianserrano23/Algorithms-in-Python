@@ -25,16 +25,24 @@ class TreeNode:
                 self.right.insert(value)
         
         # in order traversal, calls each node's value in numerical order
-    def inorderTraversal(self):
+    def in_orderTraversal(self):
         # first we will go as far left as possible
         # if we cant go left anymore, we call print()
         # then we traverse as far right as possible 
         if self.left: # if left node exists
-            self.left.inorderTraversal()
+            self.left.in_orderTraversal()
         print(self.value)
         if self.right:
-            self.right.inorderTraversal()
+            self.right.in_orderTraversal()
 
+    #preorder traversal
+    def pre_orderTraversal(self):
+        # we print the value first
+        print(self.value)
+        if self.left: # if left node exists
+            self.left.pre_orderTraversal()
+        if self.right:
+            self.right.pre_orderTraversal()
 
 
 # root node
@@ -52,4 +60,6 @@ tree.insert(11)
 tree.insert(4)
 tree.insert(2)
 
-tree.inorderTraversal()
+tree.in_orderTraversal()
+
+tree.pre_orderTraversal()
