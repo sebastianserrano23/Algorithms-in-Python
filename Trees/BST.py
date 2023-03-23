@@ -4,6 +4,9 @@
 # every value greater than or equal to the root/parent node will be on the right side
 # each child node can be viewed as its own binary tree, to make the function recursive, same rules apply
 
+from tkinter import N
+
+
 class TreeNode:
 
     def __init__(self, value):
@@ -52,6 +55,21 @@ class TreeNode:
             self.right.post_orderTraversal()
         print(self.value)
 
+    # implement a function to find something somewhere
+    def find(self, value):
+        if value < self.value:
+            if self.value is None:
+                return False
+            else:
+                return self.left.find(value)
+        elif value > self.value:
+            if self.right is None:
+                return False
+            else:
+                return self.right.find(value)
+        else:
+            return True
+        
 
 # root node
 tree = TreeNode(6)
@@ -73,3 +91,5 @@ print("end")
 tree.pre_orderTraversal()
 print("end")
 tree.post_orderTraversal()
+print("end")
+print(tree.find(2))
