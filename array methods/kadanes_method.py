@@ -19,9 +19,9 @@ def maxSubArray(nums: List[int]) -> int:
         maxSum = nums[0] # set the maxSum to the value of the first index since the subarray is non 0
         curSum = 0 # set the value of current sum = 0
         
-        for i in nums: # loop through the values of the array
+        for i in range(len(nums)): # loop through the values of the array
             if curSum < 0: # if curSum ever becomes negative, we reset it equal to 0
                 curSum = 0 
-            curSum += i # we add the current value of i to our current sum
+            curSum += nums[i] # we add the current value of i to our current sum
             maxSum = max(maxSum, curSum) # we set maxSum to whiever is greater between maxSum or curSum
         return maxSum # we return maxSum
